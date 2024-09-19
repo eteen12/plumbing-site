@@ -4,6 +4,7 @@ export function useScrollEffect() {
   const [scrollingDown, setScrollingDown] = useState(false);
   const [prevScrollPos, setPrevScrollPos] = useState(0); //loads 0 when is at the top of the page
   const [background, setBackground] = useState("transparent");
+  const [shadow, setShadow] = useState("none");
 
   useEffect(() => {
     const handleScroll = () => {
@@ -17,9 +18,14 @@ export function useScrollEffect() {
         return;
       }
 
-      
       setScrollingDown(newScrollPos > prevScrollPos); // it will set scrollingDown useState to (true), if current scroll is greater than previous, meaning that the nav bar will disapear
       setPrevScrollPos(newScrollPos); // sets the prevScrollPos to the current one, so that the above function can work
+
+      if (newScrollPos > 2) {
+        setShadow("0px 2px 4px rgba(0, 0, 0, 0.5)");
+      } else {
+        setShadow("none");
+      }
 
       if (newScrollPos > 2) {
         setBackground("black");
@@ -31,5 +37,5 @@ export function useScrollEffect() {
     return () => window.removeEventListener("scroll", handleScroll); //stops listening to avoid memory leaks
   }, [prevScrollPos]); //by using a dependancy array the effect only re-runs when one of the dependencies change, without it it might use outdated values of prevScrollPos
 
-  return { scrollingDown,background };
+  return { scrollingDown, background, shadow };
 }
