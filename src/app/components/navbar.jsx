@@ -1,6 +1,7 @@
 "use client";
 import { useState } from "react";
 import { useScrollEffect } from "/hooks/useScrollEffect";
+import { useDisableScroll } from "../../../hooks/useDisableScroll";
 import "/src/app/globals.css";
 import Link from "next/link";
 import Image from "next/image";
@@ -17,6 +18,8 @@ import {
 export default function NavBar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const { scrollingDown, background, shadow } = useScrollEffect();
+
+  useDisableScroll(menuOpen);
 
   const handleNav = () => {
     setMenuOpen(!menuOpen);
@@ -87,7 +90,8 @@ export default function NavBar() {
         }`}
         style={{
           position: "fixed",
-          transition: "opacity 0.5s ease-out, visibility 0.5s ease-out, transform 0.5s ease-out",
+          transition:
+            "opacity 0.5s ease-out, visibility 0.5s ease-out, transform 0.5s ease-out",
         }}
       >
         <div className="absolute top-0 left-0 -mt-8 w-40 h-40">
