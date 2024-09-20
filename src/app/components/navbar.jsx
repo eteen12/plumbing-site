@@ -28,7 +28,7 @@ export default function NavBar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full h-24 lg:h-28 transition-transform duration-700 ${
+      className={`fixed top-0 left-0 w-full h-24 lg:h-24 transition-transform duration-700 ${
         scrollingDown ? "-translate-y-full" : "translate-y-0"
       }`}
       style={{

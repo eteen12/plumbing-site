@@ -1,6 +1,15 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* montserrat*/
+.montserrat700{
+  font-weight: 700;
+}
+/* for medium font*/
+.mediumFont{
+  font-size: 1px;
+}
 .closeBtn {
   margin-left: 26.5px;
   margin-top: -6px;
