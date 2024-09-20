@@ -24,6 +24,7 @@ export default function NavBar() {
   const handleNav = () => {
     setMenuOpen(!menuOpen);
   };
+  
 
   return (
     <nav
@@ -65,13 +66,6 @@ export default function NavBar() {
                 About
               </li>
             </Link>
-            <li className="ml-10">
-              <a href="tel:+1234567890">
-                <button className="bg-red-700 text-white lg:text-xl py-2 px-4 rounded-full transition-transform duration-300 ease-in-out transform hover:scale-110">
-                  Call Us
-                </button>
-              </a>
-            </li>
           </ul>
         </div>
         <div
@@ -136,11 +130,11 @@ export default function NavBar() {
             </Link>
           </ul>
         </div>
-        <div className="pt-32">
+        <div className="pt-28">
           <div className="bottom-0 left-0 right-0 flex items-center text-nowrap w-full">
-            <a href="tel:+1234567890" className="w-full">
-              <button className="bg-red-700 text-white text-xl w-full  button">
-                Contact Us
+            <a href="tel:+1234567890" className="w-full pt-2">
+              <button className="bg-red-700 py-2 text-white text-xl w-full button">
+                Call Now!
               </button>
             </a>
           </div>

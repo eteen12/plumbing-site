@@ -21,7 +21,7 @@ export function useScrollEffect() {
       setScrollingDown(newScrollPos > prevScrollPos); // it will set scrollingDown useState to (true), if current scroll is greater than previous, meaning that the nav bar will disapear
       setPrevScrollPos(newScrollPos); // sets the prevScrollPos to the current one, so that the above function can work
 
-      if (newScrollPos > 2) {
+      if (newScrollPos > 10) {
         setShadow("0px 2px 4px rgba(0, 0, 0, 0.5)");
       } else {
         setShadow("none");

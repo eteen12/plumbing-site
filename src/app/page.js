@@ -1,4 +1,5 @@
 import NavBar from "./components/navbar";
+import HomeServices from "./components/homeservices"; // Import the component
 import Image from "next/image";
 import BackgroundImage from "/public/background.jpg";
 import MobileBackgroundImage from "/public/backgroundMobile.jpg";
@@ -15,7 +16,7 @@ export default function Home() {
           src={BackgroundImage}
           className="object-cover brightness-75 z-10"
           fill
-          alt="Background Image "
+          alt="Background Image"
           priority
         />
       </div>
@@ -30,7 +31,7 @@ export default function Home() {
       </div>
 
       {/* Main Content */}
-      <div className="relative z-30 flex flex-col items-start justify-center min-h-screen px-7 lg:px-10 xl:px-14 2xl:px-24 ">
+      <div className="relative z-30 flex flex-col items-start justify-center min-h-screen px-7 lg:px-10 xl:px-14 2xl:px-24 textMontserrat">
         <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-white text-wrap">
           Kelownas Trusted <br /> Plumbing Professionals
         </h1>
@@ -40,7 +41,7 @@ export default function Home() {
         <div className="flex space-x-4 mt-6">
           <a
             href="#"
-            className="bg-transparent text-white px-6 py-2 border border-white text-lg "
+            className="bg-transparent text-white px-6 py-2 border border-white text-lg"
           >
             Services
           </a>
@@ -53,22 +54,32 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Content to enable scrolling */}
-      <div className="relative z-30 bg-white text-black py-8">
-        <div className="w-full max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl mb-4">More Content Below</h2>
-          <p className="mb-4">
-            This is additional content to demonstrate scrolling. Add as much
-            text as you need to test scrolling behavior.
-          </p>
-          {/* Repeat or add more content here */}
-          {[...Array(50)].map((_, i) => (
-            <p key={i} className="mb-2">
-              This is line {i + 1} of the content for scrolling test.
+      {/* Services Header Section */}
+      <div className="flex flex-col md:grid md:grid-cols-2">
+        <div className="pt-12 px-6">
+          <div className="flex items-center">
+            <div className="w-16 h-px bg-red-700 mr-3"></div>
+            <p className="text-sm md:text-base lg:text-lg xl:text-xl font-semibold text-red-700">
+              Our Services
             </p>
-          ))}
+          </div>
+          <h2 className="text-xl">
+            From Leaking Faucets
+            <br />
+            <span>to Bursting Pipes</span>
+          </h2>
+        </div>
+
+        {/* Services Description Section */}
+        <div className="pt-5 px-5">
+          <p>
+            We got you covered. Certified professionals. Guaranteed results. We
+            do a wide range of services, from private sector to large industrial
+            commercial plumbing. No job is too big or too small.
+          </p>
         </div>
       </div>
+      <HomeServices />
     </div>
   );
 }
