@@ -57,7 +57,9 @@ export default function Home() {
 
       {/* About*/}
       <AboutHome />
+      <div className="p-10">
       <HomeServices />
+      </div>
     </div>
   );
 }

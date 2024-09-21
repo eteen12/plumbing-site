@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import "/src/app/globals.css";
 import PlumberSpeaking from "/public/plumberSpeaking.jpg";
+import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
 export default function AboutHome() {
   return (
@@ -31,6 +32,22 @@ export default function AboutHome() {
           satisfaction. Our experienced team is here to handle all your plumbing
           needs, from routine maintenance to emergency repairs.
         </p>
+
+        <div className="mt-5">
+          <p className="flex py-1">
+            <IoMdCheckmarkCircleOutline className="text-xl mr-2 mt-px text-green-500" />
+            Immediate 24/ 7 On-Call Service
+          </p>
+          <p className="flex py-1">
+            <IoMdCheckmarkCircleOutline className="text-xl mr-2 mt-px text-green-500" />
+            Experienced and Fully Certified Technicians
+          </p>
+          <p className="flex py-1">
+            <IoMdCheckmarkCircleOutline className="text-xl mr-2 mt-px text-green-500" />
+            Results Guaranteed – We Stand Behind Our Work
+          </p>
+        </div>
+
         <div className="flex flex-col sm:flex-row mt-5">
           <a
             href="#"
