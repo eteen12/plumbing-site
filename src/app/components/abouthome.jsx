@@ -22,28 +22,30 @@ export default function AboutHome() {
           <div className="w-5 h-px bg-red-700 mr-2 mt-3" />
           <p className="text-lg montserrat600 text-red-700">About Us</p>
         </div>
-        <h2 className="montserrat700 text-2xl lg:text-4xl">Your Local Plumbing Experts</h2>
+        <h2 className="montserrat700 text-2xl lg:text-4xl">
+          Your Local Plumbing Experts
+        </h2>
         <p className="mt-5 lg:text-lg">
           Serving Kelowna for over 10 years, we are dedicated to providing
           top-quality plumbing services with a commitment to customer
           satisfaction. Our experienced team is here to handle all your plumbing
           needs, from routine maintenance to emergency repairs.
         </p>
-        <div className="flex mt-5">
+        <div className="flex flex-col sm:flex-row mt-5">
           <a
             href="#"
-            className="bg-red-700 text-white px-6 py-2 border border-red-700 text-lg text-nowrap"
+            className="bg-red-700 text-white px-6 py-2 border border-red-700 text-lg text-nowrap w-auto self-start"
           >
             Contact Us
           </a>
           <a
             href="/request-quote"
-            className="text-black group flex items-center pl-4 font-semibold text-nowrap"
+            className="text-black group flex items-center sm:pl-4 font-semibold text-nowrap mt-4 sm:mt-0"
           >
-            <span className="ml-2 transition-opacity duration-300 ease-in-out montserrat500">
+            <span className="sm:ml-2 transition-opacity duration-300 ease-in-out montserrat500 ">
               Request a Quote
             </span>
-            <span className="transition-opacity duration-300 ease-in-out group-hover:opacity-0">
+            <span className="transition-opacity duration-300 ease-in-out group-hover:opacity-0 ml-2">
               &gt;
             </span>
           </a>
