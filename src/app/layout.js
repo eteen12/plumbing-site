@@ -1,7 +1,7 @@
 import { Montserrat } from "next/font/google";
 import "./globals.css";
 
-const montserrat = Montserrat({ subsets: ["latin"], weight: ["400","700",] });
+const montserrat = Montserrat({ subsets: ["latin"], weight: ["400","500","700","900"] });
 
 export const metadata = {
   title: "Kelowna Plumbing",

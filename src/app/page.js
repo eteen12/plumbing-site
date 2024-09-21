@@ -1,5 +1,6 @@
 import NavBar from "./components/navbar";
-import HomeServices from "./components/homeservices"; // Import the component
+import HomeServices from "./components/homeservices";
+import AboutHome from "./components/abouthome";
 import Image from "next/image";
 import BackgroundImage from "/public/background.jpg";
 import MobileBackgroundImage from "/public/backgroundMobile.jpg";
@@ -36,7 +37,7 @@ export default function Home() {
           Kelownas Trusted <br /> Plumbing Professionals
         </h1>
         <p className="text-base sm:text-lg md:text-xl lg:text-3xl text-white">
-          Est 2020
+          Est 2010
         </p>
         <div className="flex space-x-4 mt-6">
           <a
@@ -54,40 +55,9 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Services Header Section */}
-      <div className="relative flex flex-col sm:grid sm:grid-cols-2 pt-20 pb-20 gap-y-10 lg:px-24 xl:px-48 2xl:px-80 xl:gap-y-7">
-        {/* Services Header Section */}
-        <div className="flex flex-col justify-center relative">
-          {/* "Our Services" Line */}
-          <div className="absolute top-0 left-7 flex items-center">
-            <div className="w-10 h-px bg-red-700 mr-4"></div>
-            <p className="text-sm md:text-base lg:text-md font-semibold text-red-700">
-              Our Services
-            </p>
-          </div>
-
-          {/* For small screens */}
-          <h2 className="px-7 text-3xl sm:hidden montserrat700 mt-6">
-            From Leaking Faucets to Bursting Pipes
-          </h2>
-
-          {/* For medium to large screens */}
-          <h2 className="px-7 hidden sm:block lg:block text-3xl montserrat700 mt-6">
-            From Leaking Faucets to <br/>Bursting Pipes
-          </h2>
-        </div>
-
-        {/* Services Description Section */}
-        <div className="px-7 text-base sm:text-base lg:text-lg flex flex-col md:justify-center lg:justify-end ">
-          <p>
-            We got you covered. We do a wide range of services, from private
-            sector to large industrial commercial plumbing. No job is too big or
-            too small.
-          </p>
-        </div>
-      </div>
+      {/* About*/}
+      <AboutHome />
       <HomeServices />
     </div>
   );
 }
-

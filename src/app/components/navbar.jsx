@@ -45,7 +45,7 @@ export default function NavBar() {
               alt="logo"
               layout="fill"
               objectFit="contain"
-              priority
+              loading="lazy"
             />
           </div>
         </Link>
@@ -94,7 +94,6 @@ export default function NavBar() {
             alt="logo"
             layout="fill"
             objectFit="contain"
-            priority
           />
         </div>
         <div className="flex w-full items-center justify-end closeBtn transition-opacity pr-4 pt-5">
