@@ -29,8 +29,8 @@ export default function HomeServices() {
       scrollbar={{ draggable: true }}
       breakpoints={{
         640: { slidesPerView: 1 },
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
+        768: { slidesPerView: 1 },
+        1024: { slidesPerView: 1 },
       }}
       onSwiper={(swiper) => console.log(swiper)}
       onSlideChange={() => console.log("slide change")}

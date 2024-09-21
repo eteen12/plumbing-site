@@ -1,16 +1,16 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
 /* montserrat*/
-.montserrat700{
+.montserrat700 {
   font-weight: 700;
 }
-.montserrat600{
+.montserrat600 {
   font-weight: 600;
 }
 
-.montserrat500{
+.montserrat500 {
   font-weight: 500;
 }
 
@@ -18,24 +18,15 @@
   margin-left: 26.5px;
   margin-top: -6px;
 }
-.close{
-    margin-right:1px;
+.close {
+  margin-right: 1px;
 }
-
-/*home services page*/
-.swiper-button-next,
-.swiper-button-prev {
-  color: black; 
-}
-
-.swiper-button-next:hover,
-.swiper-button-prev:hover {
-  color: black;
-}
-.swiper-pagination-bullet {
-  background: black; 
-}
-
-.swiper-pagination-bullet-active {
-  background: black; 
+.red-tint {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(255, 0, 0, 0.5); /* Adjust opacity */
+  pointer-events: none; /* Allow clicks to pass through */
 }
