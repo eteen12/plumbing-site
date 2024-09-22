@@ -29,9 +29,11 @@ export default function ContactHome() {
         </div>
         {/*FORM */}
       </div>
-      <form className="absolute top-[21%] left-1/2 transform -translate-x-1/2 w-[89%]  bg-white p-6 shadow-md z-30 opacity-100">
+      <form className="absolute top-[21%] left-1/2 transform -translate-x-1/2 w-[89%] sm:w-[75%] md:w-[60%] bg-white p-6 shadow-md z-30 opacity-100">
         <div className="mb-4 flex flex-col">
-            <h3 className="text-red-700 montserrat500 text-lg pb-2">Book with us now</h3>
+          <h3 className="text-red-700 montserrat600 text-lg pb-2">
+            Book with us now
+          </h3>
           <label className="block text-gray-700" htmlFor="name">
             Name
           </label>
@@ -59,7 +61,39 @@ export default function ContactHome() {
             className="border border-gray-300 p-2 w-full rounded"
             required
           />
-          
+          <label className="block text-gray-700" htmlFor="address">
+            Address
+          </label>
+          <input
+            type="text"
+            id="address"
+            className="border border-gray-300 p-2 w-full rounded"
+            required
+          />
+          <label className="block text-gray-700" htmlFor="date">
+            Date
+          </label>
+          <input
+            type="date"
+            id="date"
+            className="border border-gray-300 p-2 w-full rounded"
+            required
+          />
+          <label className="block text-gray-700" htmlFor="notes">
+            Notes (Max 200 characters)
+          </label>
+          <textarea
+            id="notes"
+            maxLength="200"
+            className="border border-gray-300 p-2 w-full rounded"
+            rows="4"
+          />
+          <button
+            type="submit"
+            className="mt-4 bg-red-700 text-white font-bold py-2 hover:bg-red-500"
+          >
+            Submit
+          </button>
         </div>
       </form>
     </div>
