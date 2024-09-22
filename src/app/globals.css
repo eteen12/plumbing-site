@@ -21,6 +21,8 @@
 .close {
   margin-right: 1px;
 }
+/* styling for abouthome */
+
 /* styling for contacthome */
 .red-tint {
   position: absolute;
@@ -33,4 +35,19 @@
 }
 .maxHeight {
   max-height: 600px;
+}
+@media (min-width: 377px) {
+  .smClientDiv {
+    @apply h-1/5;
+  }
+}
+@media(min-width:432px){
+  .baseTxt{
+    @apply text-base
+  }
+}
+@media(min-width:432px){
+  .iconSize{
+    @apply text-4xl
+  }
 }

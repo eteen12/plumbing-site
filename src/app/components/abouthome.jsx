@@ -49,7 +49,7 @@ export default function AboutHome() {
           </p>
         </div>
 
-        <div className="flex flex-col sm:flex-row mt-5">
+        <div className=" flex flex-col sm:flex-row mt-5">
           <a
             href="#"
             className="bg-red-700 text-white px-6 py-2 border border-red-700 text-lg text-nowrap w-auto self-start"

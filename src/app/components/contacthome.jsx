@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 import BackgroundImage from "/public/sinkRunning.jpg";
 import Woman from "/public/woman.jpg";
-import { FaCalendarDays } from "react-icons/fa6";
+import { MdOutlineCalendarMonth } from "react-icons/md";
 import { GoPerson } from "react-icons/go";
 import "/src/app/globals.css";
 
@@ -20,20 +20,20 @@ export default function ContactHome() {
         {/*TEXT*/}
         <div className="absolute inset-0 flex flex-col items-center ">
           <div className="p-5 text-white">
-            <div className="flex items-center justify-center w-14 h-14 bg-red-700 rounded-full">
-              <FaCalendarDays className="text-3xl" />
+            <div className="flex items-center justify-center w-14 sm:w-16 h-14 sm:h-16 bg-red-700 rounded-full">
+              <MdOutlineCalendarMonth className="text-3xl" />
             </div>
           </div>
           <div className="text-white text-center">
-            <h2 className="text-2xl montserrat700">
+            <h2 className="text-2xl sm:text-3xl montserrat700">
               Book an Apointment With Us Today
             </h2>
-            <p className="p-5">Fill out the form to get started!</p>
+            <p className="p-5 sm:text-lg">Fill out the form to get started!</p>
           </div>
         </div>
         {/*FORM */}
       </div>
-      <div className=" relative top-[-20%] grid grid-cols-1 sm:grid-cols-2 w-11/12 md:w-9/12 lg:w-9/12 xl:w-8/12 2xl:w-6/12 mx-auto shadow-lg">
+      <div className=" relative top-[-13%] sm:top-[-30%] grid grid-cols-1 sm:grid-cols-2 w-11/12 md:w-9/12 lg:w-9/12 xl:w-8/12 2xl:w-6/12 mx-auto shadow-lg">
         {/* Form Section */}
         <form className="flex flex-col bg-white p-6 z-30 opacity-100">
           {/* w-[89%] sm:w-[75%] md:w-[60%] */}
@@ -110,15 +110,17 @@ export default function ContactHome() {
             <Image
               src={Woman}
               alt="Happy Customer Using Sink"
-              className="object-cover h-full w-full "
+              className="object-cover h-full w-full"
               loading="lazy"
             />
-            <div className="absolute bottom-0 right-0 0 w-1/3 h-1/5 flex flex-col items-center text-white border-spacing-3 border-4 border-white bg-red-700">
-              <span className="text-4xl  z-20">
+            <div className="absolute bottom-0 right-0 w-1/3 h-2/8 sm:w-3/6 smClientDiv flex flex-col items-center justify-center text-white border-spacing-3 border-4 border-white bg-red-700 ">
+              <span className="text-3xl iconSize sm:text-4xl z-20">
                 <GoPerson />
               </span>
-              <p className="font-bold text-3xl  z-20">200 +</p>
-              <p className="z-20">Happy Clients</p>
+              <p className="font-bold text-xl sm:text-2xl z-20">200 +</p>
+              <p className="z-20 text-sm baseTxt sm:text-base text-center ">
+                Happy Clients
+              </p>
             </div>
           </div>
         </div>
