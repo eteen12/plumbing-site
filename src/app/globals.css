@@ -31,4 +31,6 @@
   background-color: rgba(255, 0, 0, 0.5);
   pointer-events: none;
 }
-
+.maxHeight {
+  max-height: 600px;
+}

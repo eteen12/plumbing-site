@@ -59,7 +59,7 @@ export default function Home() {
       {/* About*/}
       <AboutHome />
       <ContactHome/>
-      <div className="p-10 bg-black">
+      {/* <div className="p-10 bg-black">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
           <div className="flex items-center">
             <h1 className="text-white"></h1>
@@ -68,7 +68,7 @@ export default function Home() {
             <HomeServices />
           </div>
         </div>
-      </div>
+      </div> */}
     </div>
   );
 }
