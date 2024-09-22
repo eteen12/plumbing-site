@@ -21,8 +21,11 @@ export default function HomeServices() {
   ];
 
   return (
-    <div className="p-10 bg-black w-full h-4/6 ">
+    <div className="p-10 bg-black w-full h-5/6 ">
+      {/*GRID LAYOUT */}
       <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
+        {/*FIRST COL */}
+
         <div className="flex flex-col ">
           <div className="flex">
             <div className="w-5 h-px bg-red-700 mr-2 mt-3" />
@@ -39,7 +42,8 @@ export default function HomeServices() {
           </p>
         </div>
 
-        <div>
+        {/* SECOND COL */}
+        <div className="w-full h-full">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             navigation
@@ -50,21 +54,18 @@ export default function HomeServices() {
               768: { slidesPerView: 1 },
               1024: { slidesPerView: 1 },
             }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
+            className="h-full w-full"
           >
             {services.map((service) => (
               <SwiperSlide key={service.id}>
-                <div className="relative group w-full h-64">
-                  <div className="absolute inset-0">
-                    <Image
-                      src={service.image}
-                      alt={service.title}
-                      className="object-cover w-full h-full"
-                      loading="lazy"
-                      fill
-                    />
-                  </div>
+                <div className="relative group w-full h-full">
+                  <Image
+                    src={service.image}
+                    alt={service.title}
+                    className="object-cover w-full h-full"
+                    loading="lazy"
+                    fill
+                  />
                   <div className="absolute bottom-0 flex items-center justify-center w-full">
                     <p className="text-white">hi</p>
                   </div>
