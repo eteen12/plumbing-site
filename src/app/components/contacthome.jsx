@@ -31,13 +31,31 @@ export default function ContactHome() {
       </div>
       <form className="absolute top-[21%] left-1/2 transform -translate-x-1/2 w-[89%]  bg-white p-6 shadow-md z-30 opacity-100">
         <div className="mb-4 flex flex-col">
-            <h3>Book Now</h3>
+            <h3 className="text-red-700 montserrat500 text-lg pb-2">Book with us now</h3>
           <label className="block text-gray-700" htmlFor="name">
             Name
           </label>
           <input
             type="text"
             id="name"
+            className="border border-gray-300 p-2 w-full rounded"
+            required
+          />
+          <label className="block text-gray-700" htmlFor="email">
+            Email
+          </label>
+          <input
+            type="text"
+            id="email"
+            className="border border-gray-300 p-2 w-full rounded"
+            required
+          />
+          <label className="block text-gray-700" htmlFor="phone">
+            Phone Number
+          </label>
+          <input
+            type="tel"
+            id="phone"
             className="border border-gray-300 p-2 w-full rounded"
             required
           />
