@@ -59,28 +59,7 @@ export default function Home() {
       {/* About*/}
       <AboutHome />
       <ContactHome />
-      <div className="p-10 bg-black w-full h-4/6 ">
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
-          
-          <div className="flex flex-col ">
-            <div className="flex">
-              <div className="w-5 h-px bg-red-700 mr-2 mt-3" />
-              <p className="text-lg montserrat600 text-red-700">Services</p>
-            </div>
-            <h2 className="text-white text-2xl lg:text-4xl montserrat700 ">Explore Our Services</h2>
-            <p className="mt-5 lg:text-lg text-white">
-              We offer a variety of services to meet your needs, including
-              kitchen and bathroom plumbing, sink installation, sump pumps,
-              water filtration systems, natural gas fitting, pipe service, hot
-              water tank installation, and more!
-            </p>
-          </div>
-          
-          <div>
-            <HomeServices />
-          </div>
-        </div>
-      </div>
+      <HomeServices/>
     </div>
   );
 }

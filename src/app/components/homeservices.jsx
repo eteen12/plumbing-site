@@ -21,37 +21,59 @@ export default function HomeServices() {
   ];
 
   return (
-    <Swiper
-      modules={[Navigation, Pagination, Scrollbar, A11y]}
-      navigation
-      pagination={{ clickable: true }}
-      scrollbar={{ draggable: true }}
-      breakpoints={{
-        640: { slidesPerView: 1 },
-        768: { slidesPerView: 1 },
-        1024: { slidesPerView: 1 },
-      }}
-      onSwiper={(swiper) => console.log(swiper)}
-      onSlideChange={() => console.log("slide change")}
-    >
-      {services.map((service) => (
-        <SwiperSlide key={service.id}>
-          <div className="relative group w-full h-64">
-            <div className="absolute inset-0">
-              <Image
-                src={service.image}
-                alt={service.title}
-                className="object-cover w-full h-full"
-                loading="lazy"
-                fill
-              />
-            </div>
-            <div className="absolute bottom-0 flex items-center justify-center w-full">
-              <p className="text-white">hi</p>
-            </div>
+    <div className="p-10 bg-black w-full h-4/6 ">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
+        <div className="flex flex-col ">
+          <div className="flex">
+            <div className="w-5 h-px bg-red-700 mr-2 mt-3" />
+            <p className="text-lg montserrat600 text-red-700">Services</p>
           </div>
-        </SwiperSlide>
-      ))}
-    </Swiper>
+          <h2 className="text-white text-2xl lg:text-4xl montserrat700 ">
+            Explore Our Services
+          </h2>
+          <p className="mt-5 lg:text-lg text-white">
+            We offer a variety of services to meet your needs, including kitchen
+            and bathroom plumbing, sink installation, sump pumps, water
+            filtration systems, natural gas fitting, pipe service, hot water
+            tank installation, and more!
+          </p>
+        </div>
+
+        <div>
+          <Swiper
+            modules={[Navigation, Pagination, Scrollbar, A11y]}
+            navigation
+            pagination={{ clickable: true }}
+            scrollbar={{ draggable: true }}
+            breakpoints={{
+              640: { slidesPerView: 1 },
+              768: { slidesPerView: 1 },
+              1024: { slidesPerView: 1 },
+            }}
+            onSwiper={(swiper) => console.log(swiper)}
+            onSlideChange={() => console.log("slide change")}
+          >
+            {services.map((service) => (
+              <SwiperSlide key={service.id}>
+                <div className="relative group w-full h-64">
+                  <div className="absolute inset-0">
+                    <Image
+                      src={service.image}
+                      alt={service.title}
+                      className="object-cover w-full h-full"
+                      loading="lazy"
+                      fill
+                    />
+                  </div>
+                  <div className="absolute bottom-0 flex items-center justify-center w-full">
+                    <p className="text-white">hi</p>
+                  </div>
+                </div>
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+      </div>
+    </div>
   );
 }
