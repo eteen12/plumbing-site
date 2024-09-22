@@ -3,6 +3,7 @@ import Image from "next/image";
 import BackgroundImage from "/public/sinkRunning.jpg";
 import Woman from "/public/woman.jpg";
 import { FaCalendarDays } from "react-icons/fa6";
+import { GoPerson } from "react-icons/go";
 import "/src/app/globals.css";
 
 export default function ContactHome() {
@@ -19,13 +20,15 @@ export default function ContactHome() {
         {/*TEXT*/}
         <div className="absolute inset-0 flex flex-col items-center ">
           <div className="p-5 text-white">
-            <FaCalendarDays className="text-3xl" />
+            <div className="flex items-center justify-center w-14 h-14 bg-red-700 rounded-full">
+              <FaCalendarDays className="text-3xl" />
+            </div>
           </div>
           <div className="text-white text-center">
             <h2 className="text-2xl montserrat700">
               Book an Apointment With Us Today
             </h2>
-            <p className="p-5">Fill out the form to get started.</p>
+            <p className="p-5">Fill out the form to get started!</p>
           </div>
         </div>
         {/*FORM */}
@@ -103,24 +106,23 @@ export default function ContactHome() {
 
         {/* Image Section */}
         <div className="bg-white p-3 sm:p-5 maxHeight">
-          <div className="bg-black w-full h-full flex items-center justify-center ">
+          <div className="w-full h-full flex items-center justify-center relative">
             <Image
               src={Woman}
               alt="Happy Customer Using Sink"
               className="object-cover h-full w-full "
               loading="lazy"
             />
+            <div className="absolute bottom-0 right-0 0 w-1/3 h-1/5 flex flex-col items-center text-white border-spacing-3 border-4 border-white bg-red-700">
+              <span className="text-4xl  z-20">
+                <GoPerson />
+              </span>
+              <p className="font-bold text-3xl  z-20">200 +</p>
+              <p className="z-20">Happy Clients</p>
+            </div>
           </div>
         </div>
       </div>
     </div>
   );
-}
-{
-  /* <Image
-            src={Woman}
-            alt="Happy Customer Using Sink"
-            className="object-cover h-full w-full"
-            loading="lazy"
-          /> */
 }

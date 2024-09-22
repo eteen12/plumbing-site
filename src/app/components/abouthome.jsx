@@ -5,6 +5,7 @@ import "/src/app/globals.css";
 import PlumberSpeaking from "/public/plumberSpeaking.jpg";
 import { IoMdCheckmarkCircleOutline } from "react-icons/io";
 
+
 export default function AboutHome() {
   return (
     <div className="p-10 py-20 grid grid-cols-1 sm:grid-cols-2 lg:px-20 gap-10">
