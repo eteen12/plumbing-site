@@ -21,8 +21,12 @@
 .close {
   margin-right: 1px;
 }
-/* styling for abouthome */
-
+/* styling for homeservices */
+.swiper-button-next,
+.swiper-button-prev {
+}
+.swiper-button-next:hover,
+.swiper-button-prev:hover{}
 /* styling for contacthome */
 .red-tint {
   position: absolute;
@@ -41,13 +45,13 @@
     @apply h-1/5;
   }
 }
-@media(min-width:432px){
-  .baseTxt{
-    @apply text-base
+@media (min-width: 432px) {
+  .baseTxt {
+    @apply text-base;
   }
 }
-@media(min-width:432px){
-  .iconSize{
-    @apply text-4xl
+@media (min-width: 432px) {
+  .iconSize {
+    @apply text-4xl;
   }
 }

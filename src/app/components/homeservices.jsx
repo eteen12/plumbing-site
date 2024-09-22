@@ -23,7 +23,6 @@ export default function HomeServices() {
   return (
     <Swiper
       modules={[Navigation, Pagination, Scrollbar, A11y]}
-      spaceBetween={50}
       navigation
       pagination={{ clickable: true }}
       scrollbar={{ draggable: true }}
@@ -37,15 +36,19 @@ export default function HomeServices() {
     >
       {services.map((service) => (
         <SwiperSlide key={service.id}>
-          <div className="relative group">
-            <Image
-              src={service.image}
-              alt={service.title}
-              className="object-cover w-full h-64"
-              loading="lazy"
-              width={640}
-              height={256}
-            />
+          <div className="relative group w-full h-64">
+            <div className="absolute inset-0">
+              <Image
+                src={service.image}
+                alt={service.title}
+                className="object-cover w-full h-full"
+                loading="lazy"
+                fill
+              />
+            </div>
+            <div className="absolute bottom-0 flex items-center justify-center w-full">
+              <p className="text-white">hi</p>
+            </div>
           </div>
         </SwiperSlide>
       ))}
