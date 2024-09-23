@@ -1,7 +1,10 @@
 import NavBar from "./components/navbar";
-import Faq from "./components/faq";
 import AboutHome from "./components/abouthome";
 import ContactHome from "./components/contacthome";
+import Faq from "./components/faq";
+import Footer from "./components/footer";
+
+
 import Image from "next/image";
 import BackgroundImage from "/public/background.jpg";
 import MobileBackgroundImage from "/public/backgroundMobile.jpg";
@@ -60,6 +63,9 @@ export default function Home() {
       <AboutHome />
       <ContactHome />
       <Faq/>
+      <footer>
+        <Footer/>
+      </footer>
     </div>
   );
 }

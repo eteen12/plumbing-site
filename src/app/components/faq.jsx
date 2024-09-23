@@ -28,7 +28,7 @@ export default function Faq() {
     setOpenQuestion(openQuestion === id ? null : id);
   };
   return (
-    <div className="p-10 py-20 grid grid-cols-1 sm:grid-cols-2 lg:px-20 gap-10">
+    <div className="p-10 py-20 grid grid-cols-1 sm:grid-cols-2 lg:px-20 gap-10  w-11/12 md:w-9/12 lg:w-9/12 xl:w-8/12 2xl:w-9/12 mx-auto">
       <div>
         <div className="flex">
           <div className="w-5 h-px bg-red-700 mr-2 mt-3" />
@@ -44,10 +44,10 @@ export default function Faq() {
         </p>
         <div className=" flex mt-10">
           <a
-            href="#"
+            href="/questions"
             className="bg-red-700 text-white px-6 py-2 border border-red-700 text-lg text-nowrap w-auto self-start"
           >
-            Contact Us
+            Ask Question
           </a>
         </div>
       </div>

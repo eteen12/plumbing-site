@@ -8,7 +8,7 @@ import "/src/app/globals.css";
 
 export default function ContactHome() {
   return (
-    <div className="relative h-[160vh] sm:h-[130vh]">
+    <div className="relative h-[160vh] sm:h-[110vh]">
       <div className="relative w-full h-1/3 sm:h-1/2">
         <Image
           src={BackgroundImage}
