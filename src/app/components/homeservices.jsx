@@ -8,6 +8,7 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import "swiper/css/scrollbar";
+import "/src/app/globals.css";
 
 import Residential from "/public/residentialPlumbing.jpg";
 import Commercial from "/public/commercialPlumbing.jpg";
@@ -21,12 +22,12 @@ export default function HomeServices() {
   ];
 
   return (
-    <div className="p-10 bg-black w-full h-5/6 ">
+    <div className="p-10 bg-black w-full h-5/6 z-0">
       {/*GRID LAYOUT */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full">
+      <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 h-full ">
         {/*FIRST COL */}
 
-        <div className="flex flex-col ">
+        <div className="flex flex-col w-full h-1">
           <div className="flex">
             <div className="w-5 h-px bg-red-700 mr-2 mt-3" />
             <p className="text-lg montserrat600 text-red-700">Services</p>
@@ -43,7 +44,7 @@ export default function HomeServices() {
         </div>
 
         {/* SECOND COL */}
-        <div className="w-full h-full">
+        <div className="w-full h-4/6">
           <Swiper
             modules={[Navigation, Pagination, Scrollbar, A11y]}
             navigation
@@ -54,22 +55,23 @@ export default function HomeServices() {
               768: { slidesPerView: 1 },
               1024: { slidesPerView: 1 },
             }}
-            className="h-full w-full"
+            className="h-full w-full "
           >
             {services.map((service) => (
               <SwiperSlide key={service.id}>
-                <div className="relative group w-full h-full">
+                <div className="relative group w-10/12 h-full mx-auto align-middle overflow-visible">
                   <Image
                     src={service.image}
                     alt={service.title}
-                    className="object-cover w-full h-full"
+                    className="object-cover"
                     loading="lazy"
                     fill
                   />
-                  <div className="absolute bottom-0 flex items-center justify-center w-full">
-                    <p className="text-white">hi</p>
-                  </div>
                 </div>
+                <div className="">
+                    <p className="">{service.title}</p>
+                    
+                  </div>
               </SwiperSlide>
             ))}
           </Swiper>

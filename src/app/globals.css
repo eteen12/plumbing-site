@@ -22,11 +22,36 @@
   margin-right: 1px;
 }
 /* styling for homeservices */
-.swiper-button-next,
-.swiper-button-prev {
+
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; 
+  color: red; 
 }
+
 .swiper-button-next:hover,
-.swiper-button-prev:hover{}
+.swiper-button-prev:hover {
+  color:white;
+}
+
+.swiper-button-next:hover::after,
+.swiper-button-prev:hover::after {
+  color: pink; 
+}
+.swiper-pagination-bullet {
+  background: red; /* Default color of the dots */
+  opacity: 1; /* Make sure the dots are fully opaque */
+  width: 12px; /* Size of the dots */
+  height: 12px;
+  border-radius: 50%; /* Circular shape */
+  margin: 0 4px; /* Spacing between dots */
+}
+
+.swiper-pagination-bullet-active {
+  background: red; /* Color of the active dot */
+}
+
 /* styling for contacthome */
 .red-tint {
   position: absolute;

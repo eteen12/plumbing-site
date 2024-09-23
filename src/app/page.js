@@ -1,5 +1,5 @@
 import NavBar from "./components/navbar";
-import HomeServices from "./components/homeservices";
+import Faq from "./components/faq";
 import AboutHome from "./components/abouthome";
 import ContactHome from "./components/contacthome";
 import Image from "next/image";
@@ -59,7 +59,7 @@ export default function Home() {
       {/* About*/}
       <AboutHome />
       <ContactHome />
-      <HomeServices/>
+      <Faq/>
     </div>
   );
 }
