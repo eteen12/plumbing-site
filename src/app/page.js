@@ -4,7 +4,6 @@ import ContactHome from "./components/contacthome";
 import Faq from "./components/faq";
 import Footer from "./components/footer";
 
-
 import Image from "next/image";
 import BackgroundImage from "/public/background.jpg";
 import MobileBackgroundImage from "/public/backgroundMobile.jpg";
@@ -59,12 +58,14 @@ export default function Home() {
         </div>
       </div>
 
-      {/* About*/}
       <AboutHome />
+
       <ContactHome />
-      <Faq/>
+
+      <Faq />
+
       <footer>
-        <Footer/>
+        <Footer />
       </footer>
     </div>
   );
