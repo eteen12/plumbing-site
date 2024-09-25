@@ -66,14 +66,17 @@ export default function ServicesHome() {
                 </button>
               </div>
               {overlay === index && (
-                <div className="absolute inset-0 bg-red-700 bg-opacity-75 flex items-center justify-center">
-                  <h2 className="text-white text-3xl">Overlay Content</h2>
-                  <button
-                    onClick={() => setOverlay(null)}
-                    className="bg-white text-black px-4 py-2 rounded absolute top-4 right-4"
-                  >
-                    Close
-                  </button>
+                <div className="absolute inset-0 bg-red-700  flex items-center justify-center h-[113%]">
+                  <div className="text-white text-center p-4">
+                    <h2 className="text-3xl mb-4">{service.title}</h2>
+                    <p className="mb-4">{service.moreInfo}</p>
+                    <button
+                      onClick={() => setOverlay(null)}
+                      className="bg-white text-black px-4 py-2 rounded"
+                    >
+                      Close
+                    </button>
+                  </div>
                 </div>
               )}
             </div>
