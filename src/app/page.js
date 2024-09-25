@@ -1,6 +1,7 @@
 import NavBar from "./components/navbar";
 import AboutHome from "./components/abouthome";
 import ContactHome from "./components/contacthome";
+import ServicesHome from "./components/serviceshome";
 import Faq from "./components/faq";
 import Footer from "./components/footer";
 
@@ -57,7 +58,7 @@ export default function Home() {
           </a>
         </div>
       </div>
-
+      <ServicesHome />
       <AboutHome />
 
       <ContactHome />
